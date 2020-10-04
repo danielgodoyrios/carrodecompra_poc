@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CarroController@index');
+Route::post('/carro/agregar/', 'CarroController@addCarro');
+Route::post('/carro/eliminar/', 'CarroController@deleteCarro');
+Route::post('/eliminar/sessions/', 'CarroController@deleteSessions');
+
+
+
+
+
